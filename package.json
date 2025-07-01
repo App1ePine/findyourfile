@@ -1,0 +1,34 @@
+{
+	"name": "findyourfile",
+	"version": "1.0.0",
+	"description": "文件存放位置查询软件。",
+	"author": "Jianlong Deng",
+	"main": "electron/main.cjs",
+	"type": "module",
+	"scripts": {
+		"dev": "rsbuild dev",
+		"bb": "rsbuild build",
+		"pp": "rsbuild build && rsbuild preview",
+		"edev": "rsbuild dev --host localhost && electron .",
+		"ebuild": "rsbuild build && bun run ebuild:mac && bun run ebuild:win",
+		"ebuild:mac": "electron-builder --mac --arm64",
+		"ebuild:win": "electron-builder --win --x64"
+	},
+	"devDependencies": {
+		"@rsbuild/core": "^1.0.0",
+		"@rsbuild/plugin-vue": "^1.0.0",
+		"electron": "^37.1.0",
+		"electron-builder": "^26.0.12"
+	},
+	"dependencies": {
+		"@element-plus/icons-vue": "^2.3.0",
+		"axios": "^1.7.0",
+		"echarts": "^5.5.0",
+		"element-plus": "^2.8.0",
+		"pinia": "^2.0.0",
+		"sqlite3": "^5.1.0",
+		"vue": "^3.4.0",
+		"vue-echarts": "^7.0.0",
+		"vue-router": "^4.0.0"
+	}
+}

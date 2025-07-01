@@ -1,0 +1,9 @@
+.vscode/
+.cursor/
+.idea/
+.git/
+release/
+node_modules/
+dist/
+build/
+*.lock

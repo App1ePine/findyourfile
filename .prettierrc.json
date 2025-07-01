@@ -1,0 +1,60 @@
+{
+	"printWidth": 100,
+	"tabWidth": 2,
+	"useTabs": true,
+	"semi": false,
+	"singleQuote": true,
+	"quoteProps": "as-needed",
+	"trailingComma": "all",
+	"bracketSpacing": true,
+	"arrowParens": "always",
+	"endOfLine": "lf",
+	"proseWrap": "always",
+	"htmlWhitespaceSensitivity": "css",
+	"bracketSameLine": false,
+	"vueIndentScriptAndStyle": false,
+	"embeddedLanguageFormatting": "auto",
+	"jsxSingleQuote": true,
+	"overrides": [
+		{
+			"files": "*.{json,json5}",
+			"options": {
+				"printWidth": 100,
+				"singleQuote": false,
+				"trailingComma": "none"
+			}
+		},
+		{
+			"files": "*.{yaml,yml}",
+			"options": {
+				"singleQuote": false,
+				"tabWidth": 2
+			}
+		},
+		{
+			"files": "*.html",
+			"options": {
+				"printWidth": 120,
+				"htmlWhitespaceSensitivity": "ignore"
+			}
+		},
+		{
+			"files": "*.md",
+			"options": {
+				"proseWrap": "always",
+				"printWidth": 100
+			}
+		},
+		{
+			"files": "*.sql",
+			"options": {
+				"printWidth": 100,
+				"keywordCase": "upper",
+				"identifierCase": "lower",
+				"linesBetweenQueries": 1,
+				"useTabs": true,
+				"tabWidth": 4
+			}
+		}
+	]
+}

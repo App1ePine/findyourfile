@@ -1,0 +1,47 @@
+/* 全局样式 */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family:
+		'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun,
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f6f6f6;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #a8a8a8;
+}
+
+/* 公共样式 */
+.section-title {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #303133;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
