@@ -17,9 +17,9 @@ let db
 
 function createWindow() {
 	// 设置应用图标路径
-	const iconPath = process.platform === 'darwin' 
-		? path.join(__dirname, '../public/icons/mac.icns')
-		: path.join(__dirname, '../public/icons/win.ico')
+	const iconPath = process.platform === 'darwin'
+		? path.join(__dirname, '../dist/icons/mac/icon.icns')
+		: path.join(__dirname, '../dist/icons/win/icon.ico')
 		
 	mainWindow = new BrowserWindow({
 		width: 1200,

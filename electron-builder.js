@@ -8,12 +8,14 @@ export default {
 	asar: true,
 	mac: {
 		target: [
-			{ target: 'zip', arch: ['arm64', 'x64'] },
-			{ target: 'dmg', arch: ['arm64', 'x64'] },
+			{ target: 'zip', arch: ['arm64'] },
+			{ target: 'dmg', arch: ['arm64'] },
 		],
-		icon: 'public/icons/mac.icns',
-		artifactName: 'findyourfile-${version}-mac-${arch}.${ext}',
+		icon: 'dist/icons/mac/icon.icns',
+		artifactName: 'findyourfile-${version}-mac-arm64.${ext}',
 		category: 'public.app-category.productivity',
+		// 使用自签名配置
+		identity: 'ApplePine',
 		hardenedRuntime: false,
 		notarize: false,
 	},
@@ -22,7 +24,7 @@ export default {
 			{ target: 'zip', arch: ['x64'] },
 			{ target: 'nsis', arch: ['x64'] },
 		],
-		icon: 'public/icons/win.ico',
+		icon: 'dist/icons/win/icon.ico',
 		artifactName: 'findyourfile-${version}-win-x64.${ext}',
 	},
 	nsis: {
