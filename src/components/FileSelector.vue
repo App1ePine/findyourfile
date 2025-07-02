@@ -14,7 +14,7 @@
 			<div class="drop-text">
 				<p>点击选择文件或拖放到此处</p>
 				<el-button type="primary" size="small" @click.stop="selectFile">选择文件</el-button>
-				<el-button size="small" @click.stop="selectDirectory">选择文件夹</el-button>
+				<el-button type="success"size="small" @click.stop="selectDirectory">选择文件夹</el-button>
 			</div>
 		</div>
 
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { Upload } from '@element-plus/icons-vue'
 
 export default {
@@ -39,10 +39,27 @@ export default {
 	components: {
 		Upload,
 	},
+	props: {
+		reset: {
+			type: Boolean,
+			default: false
+		}
+	},
 	emits: ['file-selected'],
 	setup(props, { emit }) {
 		const selectedFile = ref(null)
 		const isDragging = ref(false)
+
+		// 监听重置信号
+		watch(() => props.reset, (newVal) => {
+			if (newVal) {
+				resetFileSelector()
+			}
+		})
+
+		const resetFileSelector = () => {
+			selectedFile.value = null
+		}
 
 		const selectFile = async () => {
 			try {
@@ -104,6 +121,7 @@ export default {
 			selectFile,
 			selectDirectory,
 			handleDrop,
+			resetFileSelector
 		}
 	},
 }

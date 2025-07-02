@@ -3,7 +3,7 @@
 		<h1>添加新文件</h1>
 
 		<div class="file-selector-wrapper">
-			<FileSelector @file-selected="handleFileSelected" />
+			<FileSelector @file-selected="handleFileSelected" :reset="resetSignal" />
 		</div>
 
 		<el-form
@@ -104,6 +104,7 @@ export default {
 		const fileFormRef = ref(null)
 		const selectedFile = ref(null)
 		const isSubmitting = ref(false)
+		const resetSignal = ref(false)
 
 		// 分类和标签
 		const categories = ref([])
@@ -222,6 +223,13 @@ export default {
 		}
 
 		const resetForm = () => {
+			resetSignal.value = true // 发送重置信号
+			
+			// 延迟重置信号，以便下次可以再次触发
+			setTimeout(() => {
+				resetSignal.value = false
+			}, 100)
+			
 			selectedFile.value = null
 			fileForm.filePath = ''
 			fileForm.fileName = ''
@@ -252,6 +260,7 @@ export default {
 			availableTags,
 			selectedTag,
 			isSubmitting,
+			resetSignal,
 			handleFileSelected,
 			handleTagChange,
 			removeTag,
