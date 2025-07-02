@@ -16,9 +16,15 @@ let mainWindow
 let db
 
 function createWindow() {
+	// 设置应用图标路径
+	const iconPath = process.platform === 'darwin' 
+		? path.join(__dirname, '../public/icons/mac.icns')
+		: path.join(__dirname, '../public/icons/win.ico')
+		
 	mainWindow = new BrowserWindow({
 		width: 1200,
 		height: 800,
+		icon: iconPath,
 		webPreferences: {
 			preload: path.join(__dirname, 'preload.cjs'),
 			contextIsolation: true,
