@@ -11,7 +11,7 @@ export default {
 			{ target: 'zip', arch: ['arm64', 'x64'] },
 			{ target: 'dmg', arch: ['arm64', 'x64'] },
 		],
-		icon: 'src/assets/icons/icon.icns',
+		icon: 'public/icons/mac.icns',
 		artifactName: 'findyourfile-${version}-mac-${arch}.${ext}',
 		category: 'public.app-category.productivity',
 		hardenedRuntime: false,
@@ -22,7 +22,7 @@ export default {
 			{ target: 'zip', arch: ['x64'] },
 			{ target: 'nsis', arch: ['x64'] },
 		],
-		icon: 'src/assets/icons/icon.ico',
+		icon: 'public/icons/win.ico',
 		artifactName: 'findyourfile-${version}-win-x64.${ext}',
 	},
 	nsis: {

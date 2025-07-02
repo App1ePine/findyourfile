@@ -26,7 +26,7 @@
 		"echarts": "^5.5.0",
 		"element-plus": "^2.8.0",
 		"pinia": "^2.0.0",
-		"sqlite3": "^5.1.0",
+		"sqlite3": "^5.1.7",
 		"vue": "^3.4.0",
 		"vue-echarts": "^7.0.0",
 		"vue-router": "^4.0.0"
