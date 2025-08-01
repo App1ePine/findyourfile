@@ -9,7 +9,7 @@
 		"dev": "rsbuild dev",
 		"bb": "rsbuild build",
 		"pp": "rsbuild build && rsbuild preview",
-		"edev": "rsbuild dev --host localhost && electron .",
+		"edev": "rsbuild build && bunx electron .",
 		"ebuild": "rsbuild build && bun run ebuild:mac && bun run ebuild:win",
 		"ebuild:mac": "electron-builder --mac --arm64",
 		"ebuild:win": "electron-builder --win --x64"
